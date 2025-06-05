@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 243, 244, 246;
+}
+
+body {
+  background-color: #1b2538; /* Deep blue background */
+  color: #ffffff; /* Default text color to white */
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+/* Adjust styles for Link/Card backgrounds and text within pages */
+/* This will require inspecting specific components, but we can set some general styles here */
+.bg-white {
+  background-color: #ffffff;
+  color: #333; /* Darker text inside white cards */
+}
+
+.text-gray-700 {
+  color: #333; /* Adjust text color for headings inside white cards */
+}
+
+.text-gray-600 {
+  color: #555; /* Adjust text color for descriptions inside white cards */
+}
+
+.text-gray-500 {
+  color: #777; /* Adjust text color for lighter text inside white cards */
+}
+
+/* Example: Style for links and buttons */
+.text-blue-600 {
+  color: #60a5fa; /* Keep a lighter blue for links/interactive elements */
+}
+
+.hover\:text-blue-800:hover {
+  color: #3b82f6; /* Darker blue on hover */
+}
+
+/* Adjust navigation bar background */
+.bg-white.shadow-sm {
+    background-color: #1b2538; /* Navigation bar background */
+    color: #ffffff; /* Navigation text color */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.18); /* Slightly darker shadow for contrast */
+}
+
+.sm\:space-x-8 a {
+    color: #ffffff; /* Ensure navigation links are white */
+}
+
+.sm\:space-x-8 a.border-blue-500 {
+    border-color: #60a5fa; /* Highlight color for active link (lighter blue) */
+}
+
+.sm\:space-x-8 a.text-gray-900 {
+    color: #ffffff; /* Ensure active link text is white */
+}
+
+.sm\:space-x-8 a.hover\:border-gray-300:hover {
+    border-color: #60a5fa; /* Hover border color */
+}
+
+.sm\:space-x-8 a.hover\:text-gray-700:hover {
+    color: #60a5fa; /* Hover text color */
+}
+
+/* Mobile navigation styles adjustment */
+.sm\:hidden .space-y-1 a {
+    color: #ffffff; /* Ensure mobile nav links are white */
+}
+
+.sm\:hidden .space-y-1 a.bg-blue-50 {
+    background-color: rgba(96, 165, 250, 0.2); /* Light blue background for active mobile link */
+    border-color: #60a5fa; /* Border color for active mobile link */
+    color: #ffffff; /* Text color for active mobile link */
+}
+
+.sm\:hidden .space-y-1 a.hover\:bg-gray-50:hover {
+     background-color: rgba(96, 165, 250, 0.1); /* Light hover background */
+}
+
+.sm\:hidden .space-y-1 a.hover\:border-gray-300:hover {
+    border-color: #60a5fa; /* Hover border color */
+}
+
+.sm\:hidden .space-y-1 a.hover\:text-gray-700:hover {
+     color: #60a5fa; /* Hover text color */
+}
+
+/* Adjust text color for icons in quick links */
+.h-8.w-8.mr-4 {
+    color: #1b2538; /* Use the deep blue for icons */
+}
+
+/* Ensure main content background is white and text within is dark */
+main.min-h-screen {
+    background-color: #ffffff;
+    color: #333; /* Darker text for main content area */
+} 
